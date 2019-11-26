@@ -104,6 +104,7 @@ def visualize_features(feats_x, feats_y, labels, c_map, marker='.', size=50):
 
 
 def create_color_map(n_clusters):
+    """ Randomly assigns colors to each cluster """
     c_map = dict({})
     for i in range(n_clusters):
         c_map[i] = np.random.rand(3,)
@@ -114,7 +115,7 @@ def k_means(n_clusters=4, iterations=1000):
     """
     Apply k means clustering
     :param n_clusters: number of clusters
-    :param iterations:
+    :param iterations: number of iterations run K-means algorithm
     :return:
     """
     c_map = create_color_map(n_clusters)

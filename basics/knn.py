@@ -8,9 +8,9 @@ from basics.common import load_iris_dataset, split_data, compute_l2_distance
 def get_top_k_neighbors(distances_list, k):
     """
     Collects top k neighbors of a query
-    :param distances_list:
-    :param k:
-    :return:
+    :param distances_list: list of computed distances
+    :param k: number of neighbors to consider
+    :return: returns top-k ranks
     """
     # Note that from here, we transition to numpy arrays instead of lists
     distance_array = np.array(distances_list)
@@ -37,7 +37,7 @@ def apply_knn(train_dataset, test_dataset, k=1):
     Applies knn across the entire test set.
     :param train_dataset:
     :param test_dataset:
-    :param k:
+    :param k: number of neighbors to consider
     :return:
     """
     nn_array = np.zeros(shape=(test_dataset.shape[0], k))
@@ -69,8 +69,10 @@ def compute_accuracy(nn_array, train_label, test_label):
 if __name__ == '__main__':
     x, y = load_iris_dataset()
     dataset = split_data(data=x, label=y, split_ratio=0.8)
+
     nearest_neighbors = apply_knn(train_dataset=dataset['train_data'],
                                   test_dataset=dataset['test_data'], k=1)
+
     accuracy = compute_accuracy(nn_array=nearest_neighbors,
                                 train_label=dataset['train_label'],
                                 test_label=dataset['test_label'])
