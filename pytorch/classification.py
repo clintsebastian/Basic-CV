@@ -151,7 +151,7 @@ def test_random_image(data_loader, model, epoch, batch_size):
 
 if __name__ == '__main__':
     data_path = '../mnist'
-    mnist_loader = mnist_data_loader(data_path, True, batch_size=100)
+    mnist_loader = mnist_data_loader(data_path, True, batch_size=64)
     simple_net = SimpleNet()
     # train_model(mnist_loader, simple_net)
     test_random_image(mnist_loader, simple_net, 9, 100)

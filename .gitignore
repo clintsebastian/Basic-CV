@@ -1,7 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 /mnist/
 /pytorch/mnist_model/
-/image_matching/sift.py
-/image_matching/__init__.py
-/pytorch/
 /.idea/
