@@ -8,10 +8,10 @@ The 'basics' directory contains a simple implementation of k-NN and k-means algo
 Both of them are tested on the Iris dataset and can be run from their respective files. <br />
 See the docstring for details on each of the functions.
 
-### SIFT and RANSAC
+### SIFT 
 
-SIFT and RANSAC are implemented using inbuilt OpenCV functions. <br />
-As SIFT is patented, it is free to use for research and non-commercial applications. <br />
+SIFT is implemented using inbuilt OpenCV functions. <br />
+As SIFT is patented, it is only free to use for research and non-commercial applications. <br />
 It is not included as a default module in the new versions of OpenCV, and hence it is convenient to use an older version to run SIFT. <br />
 
 Conda users can install via
